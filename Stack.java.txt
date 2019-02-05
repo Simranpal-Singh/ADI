@@ -1,0 +1,50 @@
+package com.ds;
+public class Stack{
+   int  arr[];
+   int top;
+   int size;
+public Stack(){
+}
+public Stack(int x){
+   arr=new int[x];
+   top=-1;
+   size=x;
+}
+public boolean isEmpty(){
+   if(top==(-1)){
+        return true;
+}
+   else
+        return false;
+}
+public boolean isFull(){
+   if(top==(size-1)){
+        return true;
+}
+   else{
+        return false;
+}
+}
+public void push(int d){
+   if((top==(size-1))){
+     int t[]=new int[size*2];
+     int i;
+     for(i=0;i<=top;i++){
+     t[i]=arr[i];
+}
+     arr=t;
+}
+     arr[++top]=d;
+}
+public void pop(){
+   top=top-1;
+}
+public int peek(){
+   return arr[top];
+}
+public void print(){
+   int i;
+   for(i=0;i<=top;i++){
+   System.out.println(arr[i]);
+}
+-- INSERT --                                                                      
